@@ -11,8 +11,6 @@ jobs:
     - uses: actions/checkout@v2
     - name: Set up Python ${{ python-version }}
       uses: actions/setup-python@v2
-      with:
-        python-version: ${{ python-version }}
     - name: Correr pruebas
       id: correr-pruebas
       run: python -m unittest -v tests/test_persona.py
