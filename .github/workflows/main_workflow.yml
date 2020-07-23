@@ -8,8 +8,9 @@ jobs:
     env:
         python-version: 3.7
     steps:
-    - uses: actions/checkout@v2
-    - name: Set up Python
+    - name: Configuración de checkout de repositorios de acciones
+      uses: actions/checkout@v2
+    - name: Configuración de entorno de python
       uses: actions/setup-python@v2
     - name: Correr pruebas
       id: correr-pruebas
