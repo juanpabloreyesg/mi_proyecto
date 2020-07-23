@@ -9,7 +9,7 @@ jobs:
         python-version: 3.7
     steps:
     - uses: actions/checkout@v2
-    - name: Set up Python ${{ python-version }}
+    - name: Set up Python
       uses: actions/setup-python@v2
     - name: Correr pruebas
       id: correr-pruebas
