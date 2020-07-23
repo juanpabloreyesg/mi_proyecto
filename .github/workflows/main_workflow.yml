@@ -6,14 +6,13 @@ jobs:
     name: Pruebas
     runs-on: ubuntu-latest
     strategy:
-      matrix:
         python-version: 3.7
     steps:
     - uses: actions/checkout@v2
-    - name: Set up Python ${{ matrix.python-version }}
+    - name: Set up Python ${{ python-version }}
       uses: actions/setup-python@v2
       with:
-        python-version: ${{ matrix.python-version }}
+        python-version: ${{ python-version }}
     - name: Correr pruebas
       id: correr-pruebas
       run: python -m unittest -v tests/test_persona.py
