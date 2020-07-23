@@ -5,7 +5,7 @@ jobs:
   job1:
     name: Pruebas
     runs-on: ubuntu-latest
-    strategy:
+    env:
         python-version: 3.7
     steps:
     - uses: actions/checkout@v2
