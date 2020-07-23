@@ -1,7 +1,6 @@
   
 name: Test de integración
 on: push
-
 jobs:
   job1:
     name: Pruebas
