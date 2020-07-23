@@ -1,4 +1,4 @@
-name: automerge
+name: Automerge
 on:
   pull_request:
     types:
@@ -34,6 +34,7 @@ jobs:
           coverage run -m unittest tests/test_persona.py
           coverage report -m
   automerge:
+    name: Merge automático
     needs: job1
     runs-on: ubuntu-latest
     steps:
