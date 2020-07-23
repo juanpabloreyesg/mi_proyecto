@@ -4,15 +4,13 @@ jobs:
   job1:
     name: Pruebas
     runs-on: ubuntu-latest
-    env:
-        python-version: 3.7
     steps:
     - name: Configuración de checkout de repositorios de acciones
       uses: actions/checkout@v2
     - name: Configuración de entorno de python
       uses: actions/setup-python@v2
       with:
-          python-version: ${{ python-version }}
+          python-version: '3.7'
     - name: Correr pruebas
       id: correr-pruebas
       run: python -m unittest -v tests/test_persona.py
